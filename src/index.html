@@ -143,10 +143,14 @@
             //console.log(display);
             //console.log(buttons);
 
+            let currVal="";
+
             for(let i=0;i<buttons.length;i++){
                 const button=buttons[i];
                 button.addEventListener('click',function(){
-                    console.log('button clicked', button.innerText);
+                    const value=button.innerText;
+                    currVal+=value;
+                    display.value=currVal;
                 })
             }
             
