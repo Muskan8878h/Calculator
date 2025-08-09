@@ -13,7 +13,11 @@ document.addEventListener("DOMContentLoaded", function(){
         const convertVal=currVal
             .replace("×","*")
             .replace("÷","/")
-            .replace('%','*0.01');
+            .replace('%','*0.01')
+            .replace("sin","Math.sin")
+            .replace("cos","Math.cos")
+            .replace("ln","Math.log")
+            .replace("π","Math.PI");
     
         const result=eval(convertVal);
         currVal=result.toString();
