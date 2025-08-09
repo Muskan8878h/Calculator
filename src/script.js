@@ -17,7 +17,11 @@ document.addEventListener("DOMContentLoaded", function(){
             .replace("sin","Math.sin")
             .replace("cos","Math.cos")
             .replace("ln","Math.log")
-            .replace("π","Math.PI");
+            .replace("π","Math.PI")
+            .replace("log","Math.log10")
+            .replace("e","Mathy.E")
+            .replace("tan","Math.tan")
+            .replace("√","Math.sqrt");
     
         const result=eval(convertVal);
         currVal=result.toString();
