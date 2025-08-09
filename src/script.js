@@ -32,15 +32,21 @@ document.addEventListener("DOMContentLoaded", function(){
         const button=buttons[i];
         button.addEventListener('click',function(){
             const value=button.innerText;
-            if(value=='AC'){
-                currVal="";
-                display.value=currVal;
-            }
-            else if(value== '='){
-                evaluateResult();
-            }
-            else{
-                currVal+=value;
+            try{
+                if(value=='AC'){
+                    currVal="";
+                    display.value=currVal;
+                }
+                else if(value== '='){
+                    evaluateResult();
+                }
+                else{
+                    currVal+=value;
+                    display.value=currVal;
+                }
+            } catch(error){
+                console.log(error);
+                currVal="ERROR";
                 display.value=currVal;
             }
         })
