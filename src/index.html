@@ -151,8 +151,14 @@
                 const button=buttons[i];
                 button.addEventListener('click',function(){
                     const value=button.innerText;
-                    currVal+=value;
-                    display.value=currVal;
+                    if(value=='AC'){
+                        currVal="";
+                        display.value=currVal;
+                    }
+                    else{
+                        currVal+=value;
+                        display.value=currVal;
+                    }
                 })
             }
             
