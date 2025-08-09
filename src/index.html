@@ -146,6 +146,13 @@
             //console.log(buttons);
 
             let currVal="";
+            
+            function evaluateResult(){
+                console.log('current value', currVal);
+                const result=eval(currVal);
+                currVal=result.toString();
+                display.value=currVal;
+            }
 
             for(let i=0;i<buttons.length;i++){
                 const button=buttons[i];
@@ -154,6 +161,9 @@
                     if(value=='AC'){
                         currVal="";
                         display.value=currVal;
+                    }
+                    else if(value== '='){
+                        evaluateResult();
                     }
                     else{
                         currVal+=value;
