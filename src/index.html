@@ -149,9 +149,12 @@
             
             function evaluateResult(){
                 console.log('current value', currVal);
-                //convert the times to multiply
-                const convertVal=currVal.replace("×","*");
-                
+                //convert the times to multiply and divion also
+                const convertVal=currVal
+                    .replace("×","*")
+                    .replace("÷","/")
+                    .replace('%','*0.01');
+            
                 const result=eval(convertVal);
                 currVal=result.toString();
                 display.value=currVal;
