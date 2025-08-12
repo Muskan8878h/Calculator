@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
             .replace("ln","Math.log")
             .replace("π","Math.PI")
             .replace("log","Math.log10")
-            .replace("e","Mathy.E")
+            .replace("e","Math.E")
             .replace("tan","Math.tan")
             .replace("√","Math.sqrt");
     
